@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembahasan Perangkat Jaringan: Router</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 25px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 5px;
+            background: #fff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #ecf0f1;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .note {
+            background: #e8f4fc;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pembahasan Perangkat Jaringan: Router</h1>
+
+        <div class="note">
+            <strong>📌 Catatan:</strong> Materi ini dibuat sebagai bagian dari tugas perangkat jaringan komputer.
+        </div>
+
+        <h2>1. Pengertian Router</h2>
+        <p>Router adalah perangkat keras jaringan komputer yang berfungsi untuk <strong>menghubungkan dua atau lebih jaringan</strong> yang berbeda, baik jaringan yang sama media atau berbeda (seperti LAN ke WAN, atau LAN ke internet). Router bekerja pada lapisan <strong>Network Layer (Layer 3)</strong> dalam model OSI.</p>
+        <img src="router.jpg" alt="Router Hardware">
+
+        <h2>2. Fungsi Router</h2>
+        <ul>
+            <li><strong>Menghubungkan Jaringan Berbeda:</strong> Mengirimkan paket data antar jaringan yang terpisah.</li>
+            <li><strong>Mengatur Lalu Lintas Data (Routing):</strong> Menentukan jalur terbaik untuk pengiriman data berdasarkan tabel routing.</li>
+            <li><strong>Menerapkan Keamanan Jaringan:</strong> Dilengkapi fitur firewall, NAT (Network Address Translation), dan ACL (Access Control List).</li>
+            <li><strong>Membagi Jaringan (Subnetting):</strong> Membagi satu jaringan besar menjadi beberapa subnet untuk efisiensi dan manajemen.</li>
+        </ul>
+
+        <h2>3. Cara Kerja Router</h2>
+        <ol>
+            <li>Menerima paket data dari perangkat pengirim.</li>
+            <li>Membaca alamat IP tujuan pada paket data.</li>
+            <li>Mencocokkan alamat tujuan dengan tabel routing.</li>
+            <li>Mengirimkan paket ke jaringan berikutnya (hop berikutnya) menuju tujuan akhir.</li>
+            <li>Jika jalur tidak ditemukan, paket akan dibuang atau dikembalikan.</li>
+        </ol>
+        <img src="cara-kerja-router.jpg" alt="Diagram Cara Kerja Router">
+
+        <h2>4. Jenis-jenis Router</h2>
+        <ul>
+            <li><strong>Router Hardware:</strong> Perangkat fisik seperti router Wi-Fi rumah (TP-Link, D-Link) dan router enterprise (Cisco, Juniper).</li>
+            <li><strong>Router Software:</strong> Router yang berjalan sebagai aplikasi di server (misalnya: RouterOS MikroTik, pfSense).</li>
+            <li><strong>Router Wireless vs Router Kabel:</strong> Berdasarkan media koneksi yang digunakan.</li>
+            <li><strong>Core Router, Edge Router, Access Router:</strong> Berdasarkan posisi dalam jaringan.</li>
+        </ul>
+
+        <h2>5. Contoh Penerapan Router</h2>
+        <ul>
+            <li><strong>Di Rumah:</strong> Router Wi-Fi untuk membagikan koneksi internet ke laptop, HP, dan IoT.</li>
+            <li><strong>Di Kantor:</strong> Router Cisco atau MikroTik untuk menghubungkan departemen dan cabang.</li>
+            <li><strong>Di ISP:</strong> Router besar yang menghubungkan jaringan pelanggan ke internet global.</li>
+        </ul>
+
+        <h2>6. Perbandingan dengan Perangkat Jaringan Lain</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Perangkat</th>
+                    <th>Layer OSI</th>
+                    <th>Fungsi Utama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Router</strong></td>
+                    <td>Layer 3</td>
+                    <td>Menghubungkan jaringan berbeda</td>
+                </tr>
+                <tr>
+                    <td>Switch</td>
+                    <td>Layer 2</td>
+                    <td>Menghubungkan perangkat dalam LAN</td>
+                </tr>
+                <tr>
+                    <td>Hub</td>
+                    <td>Layer 1</td>
+                    <td>Meneruskan sinyal ke semua port</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>7. Kesimpulan</h2>
+        <p>Router adalah komponen <strong>penting dan kritis</strong> dalam jaringan modern, tidak hanya sebagai penghubung antar jaringan, tetapi juga sebagai pengelola lalu lintas dan pengaman data. Pemahaman tentang router sangat diperlukan bagi administrator jaringan maupun pengguna umum.</p>
+
+        <a class="back-link" href="https://tiaramailaniruswandi.github.io/">← Kembali ke Halaman Utama</a>
+    </div>
+</body>
+</html>
